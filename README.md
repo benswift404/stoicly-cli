@@ -1,2 +1,2 @@
-# stoicly-cli
+# Stoicly-CLI
 Stoicly CLI
