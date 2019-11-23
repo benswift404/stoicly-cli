@@ -41,7 +41,7 @@ func getJSON() {
 
 	defer resp.Body.Close()
 
-	var record Quotes
+	var quotes Quotes
 
 	if err := json.NewDecoder(resp.Body).Decode(&record); err != nil {
 		log.Println(err)
@@ -50,7 +50,7 @@ func getJSON() {
 	rand.Seed(time.Now().Unix())
 	randomInt := rand.Intn(len(record))
 	fmt.Print("#####  #####\n\n")
-	fmt.Printf("\"%s\" - %s\n\n", record[randomInt].Content, record[randomInt].Author)
+	fmt.Printf("\"%s\" - %s\n\n", quotes[randomInt].Content, quotes[randomInt].Author)
 	fmt.Print("#####  #####\n\n")
 	fmt.Print("Stoicly CLI was written in Go by Ben Swift\n\n")
 }
